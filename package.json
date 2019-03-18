@@ -1,6 +1,6 @@
 {
   "name": "electron-updater-example",
-  "version": "0.7.6",
+  "version": "0.7.7",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
@@ -28,11 +28,16 @@
     ],
     "protocols": {
       "name": "applitools",
-      "schemes": ["applitools"]
+      "schemes": [
+        "applitools"
+      ]
     },
     "mac": {
       "category": "Development",
-      "target": ["zip", "dmg"]
+      "target": [
+        "zip",
+        "dmg"
+      ]
     },
     "linux": {
       "target": "AppImage",

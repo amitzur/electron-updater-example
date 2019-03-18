@@ -19,7 +19,7 @@ function updater(app) {
 }
 
 function checkForUpdates() {
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdatesAndNotify().catch(err => log.error(err));
 }
 
 module.exports = updater;

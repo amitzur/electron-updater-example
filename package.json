@@ -8,7 +8,7 @@
     "publish": "build -p always",
     "build": "build",
     "postbuild": "npm run deploy",
-    "deploy": "rm -rf ~/.electron-updater-example/deployments/* && cp -R dist/* ~/.electron-updater-example/deployments"
+    "deploy": "cp -rf dist/* ~/.electron-updater-example/deployments"
   },
   "devDependencies": {
     "electron": "^3.0.2",

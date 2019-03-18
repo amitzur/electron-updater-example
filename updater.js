@@ -16,8 +16,11 @@ function updater(app) {
     })
 
     autoUpdater.on('update-downloaded', (info) => {
-        log.info('relaunching...');
-        app.relaunch();
+        log.info('Will quit and install in 2 seconds');
+        setTimeout(() => {
+            log.info('quitting and installing...');
+            app.quitAndInstall();
+        }, 2000);
     })
 
     return autoUpdater

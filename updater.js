@@ -13,7 +13,12 @@ function updater(app) {
 
     autoUpdater.on('update-not-available', (info) => {
         setTimeout(checkForUpdates, 5000);
-      })
+    })
+
+    autoUpdater.on('update-downloaded', (info) => {
+        log.info('relaunching...');
+        app.relaunch();
+    })
 
     return autoUpdater
 }

@@ -19,7 +19,7 @@ function updater(app) {
         log.info('Will quit and install in 2 seconds');
         setTimeout(() => {
             log.info('quitting and installing...');
-            app.quitAndInstall();
+            autoUpdater.quitAndInstall();
         }, 2000);
     })
 

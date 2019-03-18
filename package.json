@@ -1,13 +1,14 @@
 {
   "name": "electron-updater-example",
-  "version": "0.7.5",
+  "version": "0.7.6",
   "main": "main.js",
   "description": "electron-updater example project",
   "author": "Matt Haggard",
   "scripts": {
     "publish": "build -p always",
     "build": "build",
-    "postbuild": "cp -R dist/* wwwroot"
+    "postbuild": "npm run deploy",
+    "deploy": "rm -rf ~/.electron-updater-example/deployments/* && cp -R dist/* ~/.electron-updater-example/deployments"
   },
   "devDependencies": {
     "electron": "^3.0.2",
@@ -25,8 +26,13 @@
         "url": "http://127.0.0.1:5000"
       }
     ],
+    "protocols": {
+      "name": "applitools",
+      "schemes": ["applitools"]
+    },
     "mac": {
-      "category": "Development"
+      "category": "Development",
+      "target": ["zip", "dmg"]
     },
     "linux": {
       "target": "AppImage",

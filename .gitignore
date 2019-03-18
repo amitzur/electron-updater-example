@@ -3,3 +3,4 @@ dist/
 yarn.lock
 gh_token
 wwwroot
+.DS_STORE

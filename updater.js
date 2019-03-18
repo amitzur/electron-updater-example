@@ -12,7 +12,7 @@ function updater(app) {
     });
 
     autoUpdater.on('update-not-available', (info) => {
-        setTimeout(checkForUpdates, 2000);
+        setTimeout(checkForUpdates, 5000);
       })
 
     return autoUpdater
